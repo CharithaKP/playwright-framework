@@ -1,10 +1,12 @@
 import { Page } from '@playwright/test';
+import path from 'path';
 
 export class LoginPage {
   constructor(private page: Page) {}
 
   async navigate() {
-    await this.page.goto('/login');
+    const filePath = 'file://' + path.resolve('./test-pages/login.html');
+    await this.page.goto(filePath);
     await this.page.waitForLoadState('networkidle');
   }
 

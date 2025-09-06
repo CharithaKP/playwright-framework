@@ -7,7 +7,10 @@ yarn-error.log*
 # Test results
 test-results/
 playwright-report/
-reports/
+reports/html-reports/
+reports/allure-results/
+reports/allure-report/
+allure-results/
 
 # Environment variables
 .env
