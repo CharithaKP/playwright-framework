@@ -43,3 +43,6 @@ coverage/
 # Build outputs
 dist/
 build/
+
+# GitHub workflows (excluded due to PAT workflow scope limitations)
+.github/workflows/
