@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { LoginPage } from '../pages/LoginPage';
+import * as validData from '../data/validCredentials.json';
 
 test.describe('Login Tests', () => {
   let loginPage: LoginPage;
@@ -10,7 +11,7 @@ test.describe('Login Tests', () => {
   });
 
   test('should login with valid credentials', async ({ page }) => {
-    await loginPage.login('tomsmith', 'SuperSecretPassword!');
+    await loginPage.login(validData.username, validData.password);
     await expect(page).toHaveURL(/.*secure/);
   });
 
